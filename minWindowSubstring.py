@@ -12,7 +12,7 @@ def minWindowSubstring(s, t):
         target[c] -= 1
         
         if missing == 0: # qualified substring got
-            while target[c_i := s[i]] < 0: # squeeze the left side as much as possible
+            while target[(c_i := s[i])] < 0: # squeeze the left side as much as possible
                 target[c_i] += 1
                 i += 1
                 
@@ -25,7 +25,7 @@ def minWindowSubstring(s, t):
             target[s[i]] += 1
             missing += 1
             i += 1
-    return S[I:J] if J != float('inf') else ''
+    return s[I:J] if J != float('inf') else ''
                 
                 
     
